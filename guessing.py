@@ -2,12 +2,11 @@ print("*******************************")
 print("Bem-vindo ao jogo de advinhação")
 print("*******************************")
 
-secret_number = 42
+secret_number = 10
 attempts = 3
-actual_round = 1
 
-while actual_round <= attempts:
-    print("Tentativa ", actual_round, "de ", attempts)
+for actual_round in range(1, attempts + 1):
+    print("Tentativa {} de {}".format(actual_round, attempts))
     guess = int(input("Digite o seu número: "))
     print("Você digitou ", guess)
 
@@ -20,8 +19,5 @@ while actual_round <= attempts:
         print("Você errou! Seu chute foi maior que o número secreto")
     else:
         print("Você acertou!")
-
-    actual_round = actual_round + 1
-
 
 print("Fim do jogo")
