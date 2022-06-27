@@ -1,8 +1,10 @@
+from random import random, randrange
+
 print("*******************************")
 print("Bem-vindo ao jogo de advinhação")
 print("*******************************")
 
-secret_number = 21
+secret_number = randrange(1, 101)
 attempts = 3
 
 for actual_round in range(1, attempts + 1):
