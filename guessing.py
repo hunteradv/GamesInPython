@@ -1,4 +1,4 @@
-from random import random, randrange
+from random import randrange
 
 print("*******************************")
 print("Bem-vindo ao jogo de advinhação")
@@ -10,7 +10,7 @@ option = False
 score = 1000
 
 while option is False:
-    print("Qual nível de dificuldade?", secret_number)
+    print("Qual nível de dificuldade?")
     print("(1) Fácil (2) Médio (3) Difícil")
     level = int(input("Digite o nível: "))
 
