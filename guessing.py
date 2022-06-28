@@ -7,9 +7,10 @@ print("*******************************")
 secret_number = randrange(1, 101)
 attempts = 0
 option = False
+score = 1000
 
 while option is False:
-    print("Qual nível de dificuldade?")
+    print("Qual nível de dificuldade?", secret_number)
     print("(1) Fácil (2) Médio (3) Difícil")
     level = int(input("Digite o nível: "))
 
@@ -42,11 +43,14 @@ for actual_round in range(1, attempts + 1):
     if smaller:
         print("Você errou! Seu chute foi menor que o número secreto")
         print("")
+        lost_scores = abs(secret_number - guess)
+        score = score - lost_scores
+
     elif bigger:
         print("Você errou! Seu chute foi maior que o número secreto")
         print("")
     else:
-        print("Você acertou!")
+        print("Você acertou e fez {} pontos!".format(score))
         break
 
 print("Fim do jogo")
