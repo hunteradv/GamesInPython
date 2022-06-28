@@ -1,5 +1,8 @@
-print("**************************")
-print("Bem-vindo ao jogo de forca")
-print("**************************")
+def play():
+    print("**************************")
+    print("Bem-vindo ao jogo de forca")
+    print("**************************")
 
-print("fim do jogo")
+
+if __name__ == "__main__":
+    play()
